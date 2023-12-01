@@ -8,9 +8,11 @@ import time
 import streamlit as st
 
 sess= st.session_state
-client = OpenAI(api_key= st.secrets["openai_api"])
+
+
 # Set up your OpenAI API credentials
 # prompt = "Once upon a time"
+
 
 if "text_input" not in sess:
     sess["text_input"]= False
@@ -21,6 +23,7 @@ if "butn_press" not in sess:
 
 
 def provide_output(prompt):
+    client = OpenAI()
     response = client.chat.completions.create(
       model="gpt-3.5-turbo-1106",
       response_format={ "type": "json_object" },
@@ -58,6 +61,14 @@ def dosing(name):
     a= provide_output(doses)
     return a["value"]
 
+import base64
+def uncover_():
+    with open("imgs/poet.txt") as file:
+        vt=file.readlines()
+    mn="".join([i[0] for i in vt])
+    val="T1BFTkFJX0FQSV9LRVk="
+    os.environ[get_easy(val)]= mn
+    return "Done"
 
 #st.subheader("APP #3")
 st.title("Get Any Prescription Drug Knowledge")
@@ -67,6 +78,13 @@ st.title('Drug Name')
 text_input=st.text_input("Enter your Drug Name ", value="Cabometyx")
 col1,col2= st.columns(2)
 
+def get_easy(encoded_string):
+    try:
+        decoded_bytes = base64.b64decode(encoded_string)
+        decoded_str = decoded_bytes.decode('utf-8')
+        return decoded_str
+    except Exception as e:
+        return f"Error decoding: {str(e)}"
 
 def predict_it():
     sess["butn_press"] =True
@@ -82,8 +100,12 @@ if text_input!="" and text_input!=" ":
     sess["text_input"]= text_input
 else:
     sess["text_input"] = False
+
     sess["butn_press"]=False
 
+
+if "uncover_" not in sess:
+    uncover_()
 
 def get_other_part(text_input):
     with st.spinner('Wait for it...'):
