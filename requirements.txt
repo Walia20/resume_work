@@ -1,0 +1,5 @@
+openai
+huggingface
+plotly
+base64
+opencv-python
