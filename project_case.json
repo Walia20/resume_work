@@ -1,0 +1,20 @@
+{
+  "val1": {
+    "title": "DNA Exploratory Analysis",
+    "tech_stack": "EC2, FastAPI, S3, Pandas",
+    "img_desc": "imgs/prod_1.png",
+    "link": "http://localhost:8501/DNA_App"
+  },
+  "val2": {
+    "title": "Prescription Drug Knowledge",
+    "tech_stack": "EC2, OpenAI, NLP, Streamlit",
+    "img_desc": "imgs/prod_2.png",
+    "link": "http://localhost:8501/Get_Prescription_Knowledge"
+  },
+  "val3": {
+    "title": "Symptom Disorder Prediction",
+    "tech_stack": "Facebook-Bart, NLP, EC2, Transformer",
+    "img_desc": "imgs/prod_3.png",
+    "link": "http://localhost:8501/Predict_Disorder"
+  }
+}

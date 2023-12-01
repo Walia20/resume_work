@@ -1,0 +1,29 @@
+{
+  "val1": {
+    "title": "DNA EDA App | EC2, Streamlit, S3, FastAPI ,Pandas",
+    "project_desc": [
+      "Takes a DNA Sequence Input for Nucleotide Composition of DNA",
+      "Does EDA on the Input System and shows distribution of ATGC count",
+      "Uses Pandas and Plotly for Data Analysis and Visualization"
+    ],
+    "link": "http://google.com"
+  },
+  "val2": {
+    "title": "Prescription Drug Knowledge | EC2, OpenAI, NLP, Streamlit",
+    "project_desc": [
+      "Takes input a Drug Name as described in Prescription",
+      "Used Transformers based OpenAI API for Prediction",
+      "Predicts Description, Doctor Confirmation, Consumption Steps, Dosage"
+    ],
+    "link": "http://google.com"
+  },
+  "val3": {
+    "title": "Symptom Disorder Prediction | FB-bart, Transformer, NLP, EC2",
+    "project_desc": [
+      "Takes Inputs Symptoms of a Patient with few Disorder Options",
+      "Predict the Probability of Disorder based on context of Symptoms",
+      "Uses Zero-Classification for prediction of Disorder from FB-BART model"
+    ],
+    "link": "http://google.com"
+  }
+}
